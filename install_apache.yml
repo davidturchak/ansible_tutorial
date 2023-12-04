@@ -21,3 +21,21 @@
       name: libapache2-mod-php
       state: latest
     when: ansible_disribution == "Ubuntu"
+
+  - name: update repo index
+    dnf:
+      update_cache: yes
+    when: ansible_distribution == 'CentOS'
+
+  - name: install apache2 package
+    dnf:
+      name: httpd
+      state: latest
+    when: ansible_distribution == 'CentOS'
+
+  - name: install php support
+    dnf:
+      name: php
+      state: latest
+    when: ansible_disribution == "CentOS"
+
