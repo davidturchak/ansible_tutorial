@@ -9,3 +9,6 @@
 
 [file_servers]
 10.210.47.12
+
+[workstations]
+10.210.47.8
